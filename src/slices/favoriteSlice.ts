@@ -1,6 +1,6 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { RootState } from "../store";
-import { IPokemon } from "./types";
+import { IPokemon } from "../types";
 
 interface FavoritesState {
     favorites: IPokemon[];
@@ -35,7 +35,7 @@ const favoritesSlice = createSlice({
             state.favorites = state.favorites.filter(
                 (pokemon) => pokemon.id !== action.payload
             );
-            localStorage.setItem("favorites", JSON.stringify(state.favorites)); 
+            localStorage.setItem("favorites", JSON.stringify(state.favorites));
         },
     },
 });

@@ -1,5 +1,5 @@
 import { useMemo } from "react";
-import { IPokemon } from "../slices/types";
+import { IPokemon } from "../types";
 
 interface UseFilterProps {
     pokemons: IPokemon[];
@@ -7,7 +7,11 @@ interface UseFilterProps {
     selectedType: string;
 }
 
-export const useFilter = ({ pokemons, searchTerm, selectedType }: UseFilterProps) => {
+export const useFilter = ({
+    pokemons,
+    searchTerm,
+    selectedType,
+}: UseFilterProps) => {
     const filteredPokemons = useMemo(() => {
         return pokemons.filter(
             (pokemon) =>

@@ -1,7 +1,7 @@
 import { memo } from "react";
 import { PokemonCard } from "../PokemonCard/PokemonCard";
-import { IPokemon } from "../../slices/types";
-import "./FavoritePokemons.scss"
+import { IPokemon } from "../../types";
+import "./FavoritePokemons.scss";
 
 interface FavoritePokemonProps {
     favorites: IPokemon[];

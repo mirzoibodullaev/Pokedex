@@ -41,7 +41,7 @@ export const Select = memo(({ selectedType, onSelectType }: SelectProps) => {
                     value={selectedType}
                     onChange={(e) => onSelectType(e.target.value)}
                 >
-                    <option value="">Select Pokemon type</option>
+                    <option value="">Pokemon type</option>
                     {types.map((type) => (
                         <option key={type.name} value={type.name}>
                             {type.name}

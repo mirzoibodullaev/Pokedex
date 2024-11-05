@@ -15,3 +15,21 @@
     align-items: center;
     justify-content: space-around;
 }
+.favorite-link {
+    position: relative; 
+    display: flex; 
+    align-items: center;
+    text-decoration: none;
+}
+
+.favorites-count {
+    background-color: #FF3D00; 
+    color: white; 
+    border-radius: 50%; 
+    padding: 2px 6px; 
+    margin-left: 5px; 
+    font-size: 14px; 
+    position: absolute;
+    top: -10px; 
+    right: -10px; 
+}

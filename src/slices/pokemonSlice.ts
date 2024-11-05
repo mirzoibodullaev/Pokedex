@@ -1,6 +1,6 @@
 import axios from "axios";
 import { PayloadAction, createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import { IPokemon, PokemonState } from "./types";
+import { IPokemon, PokemonState } from "../types";
 import { RootState } from "../store";
 import { __API__ } from "../api";
 
