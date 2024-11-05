@@ -1,0 +1,17 @@
+.pokemon-card-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+    padding: 10px;
+}
+
+.no-found {
+    font-size: 23px;
+    font: bold;
+}
+
+.filter {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
