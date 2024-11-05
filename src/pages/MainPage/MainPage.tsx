@@ -92,7 +92,7 @@ export const MainPage = memo(() => {
                 />
             </div>
             {isLoading ? (
-                <Skeleton />
+                <Skeleton variant="card" />
             ) : (
                 <div className="pokemon-card-container">{pokemonCards}</div>
             )}

@@ -3,6 +3,8 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { PokemonDetails } from "../../components/PokemonDetails/PokemonDetails";
 import { IPokemon } from "../../types";
+import { Skeleton } from "../../components/Skeleton/Skeleton";
+import { __API__ } from "../../api";
 
 export const PokemonDetailsPage = () => {
     const { id } = useParams<{ id: string }>();
@@ -14,7 +16,7 @@ export const PokemonDetailsPage = () => {
         const fetchPokemonDetails = async () => {
             try {
                 const response = await axios.get<IPokemon>(
-                    `https://pokeapi.co/api/v2/pokemon/${id}`
+                    `${__API__}pokemon/${id}`
                 );
                 setPokemon(response.data);
             } catch (error) {
@@ -28,7 +30,7 @@ export const PokemonDetailsPage = () => {
         fetchPokemonDetails();
     }, [id]);
 
-    if (loading) return <p>Loading...</p>;
+    if (loading) return <Skeleton variant="details" />;
     if (error) return <p>{error}</p>;
     if (!pokemon) return <p>Pokémon not found.</p>;
 
